@@ -18,7 +18,7 @@ class Answer extends Model
 
     public function getBodyHtmlAttribute()
     {
-        return \Parsedown::instance()->longText($this->body);
+        return \Parsedown::instance()->text($this->body);
     }
 
     public static function boot()
@@ -27,8 +27,10 @@ class Answer extends Model
         static::created(function($answer){
            $answer->question->increment('answers_count');
            $answer->question->save();
-        });
-
-       
+        });       
     } 
+
+    public function getCreatedDateAttribute(){
+        return $this->created_at->diffForHumans();
+    }
 }

@@ -14,7 +14,7 @@
 
 @php
     $formId = $name."-".$model->id;
-    $formAction = "/{ $firstURISegment}/{ $model->id }/vote";
+    $formAction = "/{$firstURISegment}/{$model->id }/vote";
 @endphp
 
 <div class="d-fex flex-column vote-controls">

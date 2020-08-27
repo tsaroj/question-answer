@@ -14,6 +14,7 @@
                                 'model'=>$answer
                             ])
                         <div class="media-body">
+                            
                             {!! $answer->body_html !!}
                             <div class="row">
                                 <div class="col-4">

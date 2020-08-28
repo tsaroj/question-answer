@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DB;
+// use DB;
 
 class UsersQuestionsAnswersTableSeeder extends Seeder
 {

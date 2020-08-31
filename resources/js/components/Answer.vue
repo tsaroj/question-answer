@@ -58,7 +58,7 @@ export default {
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                 }],
             ]            
-            });
+            });      
         }           
     },
     computed: {

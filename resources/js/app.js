@@ -20,7 +20,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('user-info', require('./components/USerInfo.vue').default);
+Vue.component('user-info', require('./components/UserInfo.vue').default);
+Vue.component('answer-info', require('./components/Answer.vue').default);
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**

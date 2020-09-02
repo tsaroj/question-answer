@@ -43,6 +43,6 @@
 
     @elseif($model instanceof App\Answer)
     
-    <accept-answer :answer="{{ $model }}"></accept-answer>
+    {{-- <accept-answer :answer="{{ $model }}"></accept-answer> --}}
     @endif
 </div>

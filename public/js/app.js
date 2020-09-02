@@ -1934,7 +1934,7 @@ __webpack_require__.r(__webpack_exports__);
     create: function create() {
       var _this = this;
 
-      asios.post("/answer/".concat(this.id, "/accept")).then(function (res) {
+      axios.post("/answer/".concat(this.id, "/accept")).then(function (res) {
         _this.$toast.success(res.data.message, "success", {
           timeout: 3000,
           position: 'buttomLeft'

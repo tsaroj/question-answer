@@ -24,7 +24,7 @@ export default {
     },
     methods:{
         create(){
-            asios.post(`/answer/${this.id}/accept`)
+            axios.post(`/answer/${this.id}/accept`)
             .then(res=>{
                 this.$toast.success(res.data.message,"success",{
                     timeout:3000,

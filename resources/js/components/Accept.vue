@@ -14,7 +14,6 @@
         </a>
     </div>
 </template>
-
 <script>
 export default {
     props: ['answer'],
@@ -38,7 +37,7 @@ export default {
     },
     computed: {
         canAccept () {
-            return true;
+            return this.authorize('accept', this.answer);
         },
         accepted () {
             return !this.canAccept && this.isBest;

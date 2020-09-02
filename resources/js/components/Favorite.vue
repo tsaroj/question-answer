@@ -54,6 +54,9 @@ export default {
                 this.isFavorited = true;
             });
         }
-    }
+    },
+     mounted() {
+            console.log('Component mounted.')
+        }
 }
 </script>

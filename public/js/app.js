@@ -2117,6 +2117,9 @@ __webpack_require__.r(__webpack_exports__);
         _this2.isFavorited = true;
       });
     }
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
   }
 });
 

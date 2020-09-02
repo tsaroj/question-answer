@@ -39,7 +39,7 @@
     </form>
 
     @if ($model instanceof App\Question)
-    <favorite :question="{{ $model }}"></favorite>
+    <favorite-question :question="{{ $model }}"></favorite-question>
 
     @elseif($model instanceof App\Answer)
     

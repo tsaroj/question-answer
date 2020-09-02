@@ -50730,8 +50730,8 @@ Vue.use(vue_izitoast__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 Vue.component('user-info', __webpack_require__(/*! ./components/UserInfo.vue */ "./resources/js/components/UserInfo.vue")["default"]);
 Vue.component('answer-info', __webpack_require__(/*! ./components/Answer.vue */ "./resources/js/components/Answer.vue")["default"]);
-Vue.component('favorite', __webpack_require__(/*! ./components/Favorite.vue */ "./resources/js/components/Favorite.vue"));
-Vue.component('accept-answer', __webpack_require__(/*! ./components/Accept.vue */ "./resources/js/components/Accept.vue")); // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('favorite', __webpack_require__(/*! ./components/Favorite.vue */ "./resources/js/components/Favorite.vue")["default"]);
+Vue.component('accept-answer', __webpack_require__(/*! ./components/Accept.vue */ "./resources/js/components/Accept.vue")["default"]); // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

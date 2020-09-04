@@ -1,5 +1,5 @@
 <template>
-    <a title="Click to mark as favorite question (Click again to undo)" 
+    <a title="Click to mark as favorite question (Click again to undo)"
         :class="classes" @click.prevent="toggle">
         <i class="fas fa-star fa-2x"></i>
         <span class="favorites-count">{{ count }}</span>
@@ -11,7 +11,7 @@ export default {
     data () {
         return {
             isFavorited: this.question.is_favorited,
-            count: this.question.favorites_count,            
+            count: this.question.favorites_count,
             id: this.question.id
         }
     },
@@ -25,9 +25,9 @@ export default {
         endpoint () {
             return `/questions/${this.id}/favorites`;
         },
-        signedIn () {
-            return window.Auth.signedIn;
-        }
+        // signedIn () {
+        //     return window.Auth.signedIn;
+        // }
     },
     methods: {
         toggle () {

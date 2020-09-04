@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>    
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
 
     <!-- Fonts -->
@@ -78,7 +78,7 @@
      <script>
         window.Auth = {!! json_encode([
             'signedIn' => Auth::check(),
-            'use' => Auth::user()
+            'user' => Auth::user()
         ]) !!}
     </script>
     <script src="{{ asset('js/app.js') }}"></script>

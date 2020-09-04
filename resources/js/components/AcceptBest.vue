@@ -4,7 +4,7 @@
       :class="classes" @click.prevent="create">
           <i class="fas fa-check fa-2x"></i>
       </a>
-      <a v-if="accepted" title="The answer creator accept this answer as best answer"
+      <a v-if="accepted" title="The question creator accept this answer as best answer"
       :class="classes">
           <i class="fas fa-check fa-2x"></i>
       </a>
@@ -39,7 +39,7 @@
 
       computed:{
         canAccept(){
-          return true;
+          return this.authorize('accept',this.answer);
         },
 
         accepted(){

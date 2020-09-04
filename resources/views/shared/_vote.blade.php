@@ -42,7 +42,7 @@
     <favorite-question :question="{{ $model }}"></favorite-question>
 
     @elseif($model instanceof App\Answer)
-   <accept-answer :answer= "{{ $model }}"></accept-answer>
+   <accept-best :answer= "{{ $model }}"></accept-best>
 
     @endif
 </div>

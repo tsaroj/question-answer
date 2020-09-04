@@ -1,4 +1,4 @@
-/**
+ /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
@@ -12,23 +12,12 @@ window.Vue = require('vue');
 
 import VueIziToast from 'vue-izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import Authorization from './authorization/authorize';
 
 
 Vue.use(VueIziToast);
-Vue.use(Authorization);
 
 
-// import policies from './policies';
-// Vue.prototype.authorize = function(policy,model){
-//   if (! window.Auth.signedIn) return false;
-//
-//   if(typeof policy === 'string' && typeof model === 'object'){
-//     const usser =window.Auth.user;
-//     return policies[policy](user,model);
-//     //authori
-//   }
-// }
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -44,7 +33,7 @@ Vue.use(Authorization);
 Vue.component('user-info', require('./components/UserInfo.vue').default);
 Vue.component('answer-info', require('./components/Answer.vue').default);
 Vue.component('favorite-question', require('./components/Favorite.vue').default);
-Vue.component('accept-answer', require('./components/Accept.vue').default);
+Vue.component('accept-best', require('./components/AcceptBest.vue').default);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 

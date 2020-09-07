@@ -38,6 +38,14 @@
 
 
       computed:{
+
+
+        classes(){
+          return [
+            'mt-2',
+              this.isBest ? 'vote-accepted' : ''
+        ]
+      },
         canAccept(){
           return this.authorize('accept',this.answer);
         },
@@ -46,12 +54,7 @@
            return !this.canAccept && this.isBest;
          },
 
-         classes(){
-           return [
-             'mt-2',
-               this.isBest ? 'vote-accepted' : ''
-         ]
-       }
+
       },
 
         mounted() {

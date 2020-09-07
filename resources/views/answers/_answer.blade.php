@@ -1,8 +1,9 @@
 <answer-info :answer="{{ $answer }}" inline-template>
     <div class="media post">
-        @include ('shared._vote', [
+        {{-- @include ('shared._vote', [
             'model' => $answer
-        ])
+        ]) --}}
+        <votes-system :model="{{$answer}}" name="answer"></votes-system>
 
         <div class="media-body">
             <form v-if="editing" @submit.prevent="update">
@@ -30,9 +31,9 @@
                     <div class="col-4">
                         <user-info :model="{{ $answer }}" label="Answered"></user-info>
                     </div>
-                </div>     
-            </div>                           
+                </div>
+            </div>
         </div>
     </div>
- 
+
 </answer-info>

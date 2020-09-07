@@ -12,13 +12,14 @@
                             <div class="ml-auto">
                                 <a href="{{ route('questions.index') }}" class="btn btn-outline-secondary">Back to all Questions</a>
                             </div>
-                        </div>  
+                        </div>
                         <hr>
 
                         <div class="media">
-                            @include('shared._vote',[
+                          <votes-system :model="{{$question}}" name="question"></votes-system>
+                            {{-- @include('shared._vote',[
                                 'model'=>$question
-                            ])
+                            ]) --}}
                             <div class="media-body">
                                 {!! $question->body_html !!}
                                 <div class="row">
@@ -32,7 +33,7 @@
                                         ]) --}}
                                     </div>
                                 </div>
-                            
+
                             </div>
                         </div>
                     </div>
@@ -42,13 +43,13 @@
         @if ($question->answers_count > 0)
             @include('answers._index',[
                 'answers'=> $question->answers,
-                'answersCount'=> $question->answers_count, 
+                'answersCount'=> $question->answers_count,
             ])
         @endif
-        
+
         <div class="col-md-12">
             @include('answers._create')
         </div>
-    
+
     </div>
 @endsection

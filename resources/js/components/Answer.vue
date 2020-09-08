@@ -81,7 +81,7 @@ export default {
                     axios.delete(this.endpoint)
                     .then(res => {
 
-                        this.$emit('deleted')   
+                        this.$emit('deleted')    
                     });
                     instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
                 }, true],

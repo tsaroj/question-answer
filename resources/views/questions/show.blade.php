@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <answers :answers = "{{ $question->answers }}" :count="{{ $question->answers_count }}"></answers>
+        <answers :question = "{{ $question }}" ></answers>
 
         <div class="col-md-12">
             @include('answers._create')

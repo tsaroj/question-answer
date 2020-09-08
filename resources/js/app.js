@@ -37,7 +37,8 @@ Vue.use (Authorization);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('user-info', require('./components/UserInfo.vue').default);
-Vue.component('answer-info', require('./components/Answer.vue').default);
+// Vue.component('answer-info', require('./components/Answer.vue').default);
+Vue.component('answers', require('./components/Answers.vue').default);
 Vue.component('favorite-question', require('./components/Favorite.vue').default);
 Vue.component('accept-best', require('./components/AcceptBest.vue').default);
 Vue.component('votes-system', require('./components/Vote.vue').default);

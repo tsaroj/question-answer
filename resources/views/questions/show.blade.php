@@ -40,12 +40,7 @@
                 </div>
             </div>
         </div>
-        @if ($question->answers_count > 0)
-            @include('answers._index',[
-                'answers'=> $question->answers,
-                'answersCount'=> $question->answers_count,
-            ])
-        @endif
+        <answers :answers = "{{ $question->answers }}" :count="{{ $question->answers_count }}"></answers>
 
         <div class="col-md-12">
             @include('answers._create')

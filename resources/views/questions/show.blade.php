@@ -41,10 +41,5 @@
             </div>
         </div>
         <answers :question = "{{ $question }}" ></answers>
-
-        <div class="col-md-12">
-            @include('answers._create')
-        </div>
-
     </div>
 @endsection

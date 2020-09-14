@@ -41,13 +41,10 @@ import EventBus from '../event-bus';
 
             EventBus.$emit('accepted', this.id);
           })
-
         }
       },
 
-
       computed:{
-
 
         classes(){
           return [
@@ -63,11 +60,6 @@ import EventBus from '../event-bus';
            return !this.canAccept && this.isBest;
          },
 
-
       },
-
-        mounted() {
-            console.log('Component mounted.')
-        }
     }
 </script>

@@ -14,10 +14,10 @@ class AnswersController extends Controller
     {
         $this->middleware('auth')->except('index');
     }
-    
+
     public function index(Question $question)
     {
-        return $question->answers()->with('user')->simplePaginate(3);
+        return $question->answers()->with('user')->simplePaginate(3);    
     }
 
     /**

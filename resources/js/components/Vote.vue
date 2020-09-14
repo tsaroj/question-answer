@@ -16,15 +16,17 @@
 </template>
 
 <script>
-  import  Favorite from './Favorite.vue';
-  import  Accept from './AcceptBest.vue';
+  import  FavoriteQuestion from './Favorite.vue';
+  import  AcceptBest from './AcceptBest.vue';
+
     export default {
+
       props:['name','model'],
 
+      components:{ FavoriteQuestion, AcceptBest },
 
       computed:{
-
-
+        
         classes(){
           return this.signedIn ? '' : 'off'
 
@@ -33,12 +35,6 @@
         endpoint(){
           return `/${this.name}s/${this.id}/vote`;
         }
-      },
-
-
-      components:{
-        Favorite,
-        Accept
       },
 
       data() {
@@ -82,14 +78,5 @@
           })
         }
       },
-
-
-
-
-
-
-        mounted() {
-            console.log('Component mounted.')
-        }
     }
 </script>

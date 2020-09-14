@@ -25,9 +25,6 @@ export default {
         endpoint () {
             return `/questions/${this.id}/favorites`;
         },
-        // signedIn () {
-        //     return window.Auth.signedIn;
-        // }
     },
     methods: {
         toggle () {
@@ -55,8 +52,5 @@ export default {
             });
         }
     },
-     mounted() {
-            console.log('Component mounted.')
-        }
 }
 </script>

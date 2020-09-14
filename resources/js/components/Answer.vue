@@ -9,7 +9,7 @@
                     <textarea rows="10" v-model="body" class="form-control" required></textarea>
                 </div>
 
-             <button class="btn btn-primary" :disabled="isInvalid">Update</button>
+                <button class="btn btn-primary" :disabled="isInvalid">Update</button>
                 <button class="btn btn-outline-secondary" @click="cancel" type="button">Cancel</button>
             </form>
             <div v-else>
@@ -31,8 +31,13 @@
     </div>
 </template>
 <script>
+import VotesSystem from './Vote.vue';
+import userInfo from './UserInfo.vue';
 export default {
     props: ['answer'],
+
+    components:{ VotesSystem , userInfo },
+    
     data () {
         return {
             editing: false,

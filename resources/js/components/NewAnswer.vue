@@ -31,13 +31,13 @@
                 axios.post(`/questions/${this.questionId}/answers`, {
                     body:this.body
                 })
+                .catch(error => {
+                    this.$toast.error(error.response.data.message,"Error");
+                })
                 .then(({data})=>{
                     this.$toast.success(data.message, "success");
                     this.body = '';
                     this.$emit('created', data.answer)
-                })
-                .catch(error => {
-                    this.$toast.error(error.response.data.message,"Error");
                 })
             }
             
@@ -51,10 +51,7 @@
         computed:{
             isInvalid(){
             return  !this.signedIn || this.body.length < 10;
-        }
+            }
         },
-        mounted() {
-            console.log('Component mounted.')
-        }
     }
 </script>

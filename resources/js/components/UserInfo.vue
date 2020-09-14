@@ -27,8 +27,6 @@
                 user: this.model.user
             }
         },
-        mounted() {
-            console.log('Component mounted.')
-        }
+     
     }
 </script>
